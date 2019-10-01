@@ -15,6 +15,8 @@ public class ProviderManagement {
     public ProviderDto readProvider(Provider provider){
         _provider = new Provider();
         try{
+        	
+        	_provider = dao.getProvider(_provider);
                         
             dto.setProvider(_provider);
             dto.setMessage(Constants.FOUND);

@@ -15,6 +15,8 @@ public class ContractManagement {
     public ContractDto readContract(Contract contract){
         _contract = new Contract();
         try{
+        	
+        	_contract = dao.getContract(_contract);
             
             dto.setContract(_contract);
             dto.setMessage(Constants.FOUND);

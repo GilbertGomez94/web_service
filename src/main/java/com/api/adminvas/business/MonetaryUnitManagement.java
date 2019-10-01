@@ -15,6 +15,8 @@ public class MonetaryUnitManagement {
     public MonetaryUnitDto readMonetaryUnit(MonetaryUnit monetaryUnit){
     	_monetaryUnit = new MonetaryUnit();
         try {
+        	
+        	_monetaryUnit = dao.getMonetaryUnit(_monetaryUnit);
             
             dto.setMonetaryUnit(_monetaryUnit);
             dto.setMessage(Constants.FOUND);

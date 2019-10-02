@@ -7,17 +7,13 @@ import com.api.adminvas.dto.BlackListDto;
 
 public class BlackListManagement {
 	
-	private BlackList _blackList;
+	
     private BlackListDao dao = new BlackListDao();
     private BlackListDto dto = new BlackListDto();
 
-    public BlackListDto readBlackList(BlackList blackList){
-        _blackList = new BlackList();
-        try{
-        	
-        	_blackList = dao.getBlacklist(_blackList);
-            
-            dto.setBlacklist(_blackList);
+    public BlackListDto readBlackList(){
+        try{            
+            dto.setBlacklist(dao.getBlacklist());
             dto.setMessage(Constants.FOUND);
         } catch (Exception e) {
             dto.setMessage(Constants.NOT_FOUND);
@@ -25,5 +21,28 @@ public class BlackListManagement {
         return dto;
 
     }
+    
+    public BlackListDto insertBlackList(BlackList blackList){
+        try{            
+            dto.setBlacklist(dao.getBlacklist());
+            dto.setMessage(Constants.FOUND);
+        } catch (Exception e) {
+            dto.setMessage(Constants.NOT_FOUND);
+        }
+        return dto;
+
+    }
+    
+    public BlackListDto deleteBlackList(BlackList blackList){
+        try{            
+            dto.setBlacklist(dao.getBlacklist());
+            dto.setMessage(Constants.FOUND);
+        } catch (Exception e) {
+            dto.setMessage(Constants.NOT_FOUND);
+        }
+        return dto;
+
+    }
+    
 
 }

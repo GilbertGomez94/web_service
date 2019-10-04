@@ -1,14 +1,16 @@
 package com.api.adminvas.dao;
 
+import com.api.adminvas.domain.BasicTariff;
+
 public class BasicTariffDao {
 	
-	private BasicTariffDao basicTariff;
+	private BasicTariff basicTariff;
 
-	public BasicTariffDao getBasicTariff() throws Exception {
+	public BasicTariff getBasicTariff() throws Exception {
 		return basicTariff;
 	}
 
-	public void setBasicTariff(BasicTariffDao basicTariff) {
+	public void setBasicTariff(BasicTariff basicTariff) {
 		this.basicTariff = basicTariff;
 	}
 	

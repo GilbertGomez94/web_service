@@ -13,7 +13,7 @@ public class BasicTariffManagement {
     public BasicTariffDto readBasicTariff(){
         _basicTariff = new BasicTariff();
         try{
-            
+        	
             dto.setBasicTariff(dao.getBasicTariff());
             dto.setMessage(Constants.FOUND);
         } catch (Exception e) {

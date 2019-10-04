@@ -12,13 +12,10 @@ public class ProviderManagement {
     private ProviderDao dao = new ProviderDao();
     private ProviderDto dto = new ProviderDto();
 
-    public ProviderDto readProvider(Provider provider){
+    public ProviderDto readProvider(){
         _provider = new Provider();
         try{
-        	
-        	_provider = dao.getProvider(_provider);
-                        
-            dto.setProvider(_provider);
+            dto.setListprovider(dao.getListprovider());
             dto.setMessage(Constants.FOUND);
         } catch (Exception e) {
             dto.setMessage(Constants.NOT_FOUND);

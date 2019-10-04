@@ -14,12 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.api.adminvas.business.BlackListManagement;
 import com.api.adminvas.domain.BlackList;
-import com.api.adminvas.domain.User;
 import com.api.adminvas.dto.BlackListDto;
 
 
 @RestController
-@RequestMapping("BlackList")
+@RequestMapping("blackList")
 public class BackListManagementController {
 	
 	private BlackListManagement blackListManagement = new BlackListManagement();

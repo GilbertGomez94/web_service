@@ -12,14 +12,26 @@ public class LogManagement {
 	private LogDao dao = new LogDao();
 	private LogDto dto = new LogDto();
 	
-	public LogDto ReadLog(Log log){
+	public LogDto ReadLog(){
 		_log = new Log();
 		
 		try {
-			
-			_log = dao.getLog(_log);
-			
-			dto.setLog(_log);
+						
+			dto.setLog(dao.getLog(_log));
+			dto.setMessage(Constants.FOUND);
+        } catch (Exception e) {
+            dto.setMessage(Constants.NOT_FOUND);
+		}		
+		return dto;
+		
+	}
+	
+	public LogDto insertLog(Log _log){
+		_log = new Log();
+		
+		try {
+						
+			dto.setLog(dao.getLog(_log));
 			dto.setMessage(Constants.FOUND);
         } catch (Exception e) {
             dto.setMessage(Constants.NOT_FOUND);

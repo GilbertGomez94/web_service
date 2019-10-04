@@ -15,7 +15,7 @@ import com.api.adminvas.dto.ImpostDto;
 
 
 @RestController
-@RequestMapping("ImpostManagement")
+@RequestMapping("Impost")
 public class ImpostManagementController {
 	
 	private ImpostManagement impostManagement = new ImpostManagement();

@@ -29,11 +29,9 @@ public class LogManagementController {
             })
     public ResponseEntity<LogDto> ReadLog(){
      
-        return new ResponseEntity(logMagnagement.ReadLog(), HttpStatus.resolve(200));
+        return new ResponseEntity(logMagnagement.readLog(), HttpStatus.resolve(200));
     }
-	
-	
-	
+		
 	
 	@PutMapping(value = "insertLog/{action}/{dateAction}/{Admin}/{macAddress}",
             produces = {

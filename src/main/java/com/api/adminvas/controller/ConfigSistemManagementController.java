@@ -32,7 +32,7 @@ public class ConfigSistemManagementController {
 	        
 	    }
 	    
-	    @PostMapping( value = "InsertConfigSistem",
+	    @PostMapping( value = "InsertConfigSistem/{characteristic}/{value}",
 	    		produces = {
 	    				MediaType.APPLICATION_JSON_VALUE
 	    		})
@@ -45,11 +45,11 @@ public class ConfigSistemManagementController {
 	    	configSistem.setValue(value);
 	    	
 	    	
-	    	return new ResponseEntity(configSistemManagement.InsertConfigSistem(configSistem), HttpStatus.resolve(200));
+	    	return new ResponseEntity(configSistemManagement.insertConfigSistem(configSistem), HttpStatus.resolve(200));
 	    	
 	    }
 	    
-	    @PutMapping( value = "InsertConfigSistem",
+	    @PutMapping( value = "UpdateConfigSistem/{characteristic}/{value}",
 	    		produces = {
 	    				MediaType.APPLICATION_JSON_VALUE
 	    		})

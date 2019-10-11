@@ -23,5 +23,38 @@ public class ProviderManagement {
         return dto;
 
     }
+    
+    public ProviderDto detailProvider(Provider provider){
+        _provider = new Provider();
+        try{
+            dto.setListprovider(dao.getListprovider());
+            dto.setMessage(Constants.FOUND);
+        } catch (Exception e) {
+            dto.setMessage(Constants.NOT_FOUND);
+        }
+        return dto;
 
+    }
+    
+    public ProviderDto insertProvider(Provider provider){
+        try{
+            dto.setListprovider(dao.getListprovider());
+            dto.setMessage(Constants.FOUND);
+        } catch (Exception e) {
+            dto.setMessage(Constants.NOT_FOUND);
+        }
+        return dto;
+
+    }
+    
+    public ProviderDto updateProvider(Provider provider){
+        try{
+            dto.setListprovider(dao.getListprovider());
+            dto.setMessage(Constants.FOUND);
+        } catch (Exception e) {
+            dto.setMessage(Constants.NOT_FOUND);
+        }
+        return dto;
+
+    }
 }

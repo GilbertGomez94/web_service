@@ -4,6 +4,7 @@ public class Employee extends User {
 	
 	private String name;
 	private String  position;
+	private String area;
 	
 	public String getName() {
 		return name;
@@ -19,6 +20,14 @@ public class Employee extends User {
 	
 	public void setPosition(String position) {
 		this.position = position;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
 	}
 	
 	

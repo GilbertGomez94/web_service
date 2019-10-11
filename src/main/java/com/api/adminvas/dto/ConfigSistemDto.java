@@ -5,7 +5,7 @@ import com.api.adminvas.domain.ConfigSistem;
 public class ConfigSistemDto extends Dto {
 
 	private ConfigSistem configSistem;
-	private ConfigSistem[] listConfigSistem;
+	private ConfigSistem[] configSistemList;
 
 	public ConfigSistem getConfigSistem() {
 		return configSistem;
@@ -15,12 +15,12 @@ public class ConfigSistemDto extends Dto {
 		this.configSistem = configSistem;
 	}
 
-	public ConfigSistem[] getListConfigSistem() {
-		return listConfigSistem;
+	public ConfigSistem[] getConfigSistemList() {
+		return configSistemList;
 	}
 
-	public void setListConfigSistem(ConfigSistem[] listConfigSistem) {
-		this.listConfigSistem = listConfigSistem;
+	public void setConfigSistemList(ConfigSistem[] listConfigSistem) {
+		this.configSistemList = listConfigSistem;
 	}
 	
 	

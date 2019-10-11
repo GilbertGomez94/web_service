@@ -34,7 +34,7 @@ public class BackListManagementController {
         
     }
     
-    @PutMapping( value = "InsertBlackList",
+    @PutMapping( value = "InsertBlackList/{shortCodeBlocked}/{reason}/{date}/{admin}",
     		produces = {
     				MediaType.APPLICATION_JSON_VALUE
     		})
@@ -54,7 +54,7 @@ public class BackListManagementController {
     	
     }
     
-    @DeleteMapping( value = "DeleteBlackList",
+    @DeleteMapping( value = "DeleteBlackList/{shortCodeBlocked}",
     		produces = {
     				MediaType.APPLICATION_JSON_VALUE
     		})

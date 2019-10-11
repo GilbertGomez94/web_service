@@ -16,6 +16,36 @@ public class ContractManagement {
         _contract = new Contract();
         try{
         	
+        	_contract = dao.getContract(contract);
+            
+            dto.setContract(_contract);
+            dto.setMessage(Constants.FOUND);
+        } catch (Exception e) {
+            dto.setMessage(Constants.NOT_FOUND);
+        }
+        return dto;
+
+    }
+    
+    public ContractDto insertContract(Contract contract){
+        _contract = new Contract();
+        try{
+        	
+        	_contract = dao.getContract(_contract);
+            
+            dto.setContract(_contract);
+            dto.setMessage(Constants.FOUND);
+        } catch (Exception e) {
+            dto.setMessage(Constants.NOT_FOUND);
+        }
+        return dto;
+
+    }
+    
+    public ContractDto updateContract(Contract contract){
+        _contract = new Contract();
+        try{
+        	
         	_contract = dao.getContract(_contract);
             
             dto.setContract(_contract);

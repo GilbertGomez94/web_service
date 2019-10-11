@@ -7,6 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.api.adminvas.business.ImpostManagement;
@@ -22,11 +23,20 @@ public class ImpostManagementController {
 	private ImpostDto dto = new ImpostDto();
 	
 	
-	 @GetMapping(value = "Read_impost/{name}/{percent}",
+	@GetMapping(value = "readimpost",
+            produces = {
+                    MediaType.APPLICATION_JSON_VALUE
+            })
+    public ResponseEntity<ImpostDto> readImpost(){
+       
+        
+        return new ResponseEntity(impostManagement.readImpost(), HttpStatus.resolve(200));
+    }
+	 @PostMapping(value = "Read_impost/{name}/{percent}/{validDate}/{closingDate}/{valid}",
 	            produces = {
 	                    MediaType.APPLICATION_JSON_VALUE
 	            })
-	    public ResponseEntity<ImpostDto> createImpost(@PathVariable String name,
+	    public ResponseEntity<ImpostDto> updateImpost(@PathVariable String name,
 	                                               	  @PathVariable int percent,
 	                                               	  @PathVariable Date validDate,
 	                                               	  @PathVariable Date closingDate,
@@ -38,7 +48,7 @@ public class ImpostManagementController {
 	        impost.setClosingDate(closingDate);
 	        impost.setValid(valid);
 	        
-	        return new ResponseEntity(impostManagement.ReadImpost(impost), HttpStatus.resolve(200));
+	        return new ResponseEntity(impostManagement.updateImpost(impost), HttpStatus.resolve(200));
 	    }
 
 }

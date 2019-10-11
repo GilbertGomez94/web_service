@@ -12,13 +12,37 @@ public class MonetaryUnitManagement {
     private MonetaryUnitDao dao = new MonetaryUnitDao();
     private MonetaryUnitDto dto = new MonetaryUnitDto();
 
-    public MonetaryUnitDto readMonetaryUnit(MonetaryUnit monetaryUnit){
-    	_monetaryUnit = new MonetaryUnit();
-        try {
-        	
-        	_monetaryUnit = dao.getMonetaryUnit(_monetaryUnit);
+    public MonetaryUnitDto readMonetaryUnit(MonetaryUnit monetaryUnit ){
+    	
+        try {        	
             
-            dto.setMonetaryUnit(_monetaryUnit);
+            dto.setMonetaryUnit(dao.getMonetaryUnit(monetaryUnit));
+            dto.setMessage(Constants.FOUND);
+        } catch (Exception e) {
+            dto.setMessage(Constants.NOT_FOUND);
+        }
+        return dto;
+
+    }
+    
+    public MonetaryUnitDto insertMonetaryUnit(MonetaryUnit monetaryUnit ){
+    	
+        try {        	
+            
+            dto.setMonetaryUnit(dao.getMonetaryUnit(monetaryUnit));
+            dto.setMessage(Constants.FOUND);
+        } catch (Exception e) {
+            dto.setMessage(Constants.NOT_FOUND);
+        }
+        return dto;
+
+    }
+    
+    public MonetaryUnitDto updateMonetaryUnit(MonetaryUnit monetaryUnit ){
+    	
+        try {        	
+            
+            dto.setMonetaryUnit(dao.getMonetaryUnit(monetaryUnit));
             dto.setMessage(Constants.FOUND);
         } catch (Exception e) {
             dto.setMessage(Constants.NOT_FOUND);

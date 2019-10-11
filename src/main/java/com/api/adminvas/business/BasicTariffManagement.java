@@ -14,6 +14,32 @@ public class BasicTariffManagement {
         _basicTariff = new BasicTariff();
         try{
         	
+            dto.setBasicTariffList(dao.getBasicTariffList());
+            dto.setMessage(Constants.FOUND);
+        } catch (Exception e) {
+            dto.setMessage(Constants.NOT_FOUND);
+        }
+        return dto;
+
+    }
+    
+    public BasicTariffDto insertBasicTariff(BasicTariff basicTariff){
+        _basicTariff = new BasicTariff();
+        try{
+        	
+            dto.setBasicTariff(dao.getBasicTariff());
+            dto.setMessage(Constants.FOUND);
+        } catch (Exception e) {
+            dto.setMessage(Constants.NOT_FOUND);
+        }
+        return dto;
+
+    }
+    
+    public BasicTariffDto updateBasicTariff(BasicTariff basicTariff){
+        _basicTariff = new BasicTariff();
+        try{
+        	
             dto.setBasicTariff(dao.getBasicTariff());
             dto.setMessage(Constants.FOUND);
         } catch (Exception e) {

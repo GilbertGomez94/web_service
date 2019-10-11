@@ -12,14 +12,9 @@ public class ConfigSistemManagement {
 	private ConfigSistemDao dao = new ConfigSistemDao();
 	private ConfigSistemDto dto = new ConfigSistemDto();
 	
-	public ConfigSistemDto readConfigSistem(){
-		_configSistem = new ConfigSistem();
-		
+	public ConfigSistemDto readConfigSistem(){	
 		try {
-			
-			_configSistem = dao.getConfigSistem(_configSistem);
-			
-			dto.setConfigSistem(_configSistem);
+			dto.setConfigSistemList(dao.getConfigSistemList());
 			dto.setMessage(Constants.FOUND);
         } catch (Exception e) {
             dto.setMessage(Constants.NOT_FOUND);
@@ -28,7 +23,7 @@ public class ConfigSistemManagement {
 		
 	}
 
-	public ConfigSistemDto InsertConfigSistem(ConfigSistem configSistem){
+	public ConfigSistemDto insertConfigSistem(ConfigSistem configSistem){
 		_configSistem = new ConfigSistem();
 		
 		try {

@@ -11,7 +11,19 @@ public class ImpostManagement {
 	private ImpostDao dao = new ImpostDao();
     private ImpostDto dto = new ImpostDto();
   
-	public ImpostDto ReadImpost (Impost impost) {
+	public ImpostDto readImpost ( ) {
+			
+		try {			
+	
+			dto.setImpostList(dao.getImpostList());
+			dto.setMessage(Constants.FOUND);		
+		}catch (Exception e) {
+			dto.setMessage(Constants.NOT_FOUND);
+		}
+		return dto;
+	}
+	
+	public ImpostDto updateImpost (Impost impost) {
 		_impost = new Impost();
 		
 		try {

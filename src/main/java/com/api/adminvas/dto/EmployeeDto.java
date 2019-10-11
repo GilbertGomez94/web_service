@@ -5,7 +5,7 @@ import com.api.adminvas.domain.Employee;
 public class EmployeeDto extends Dto {
 
 	private Employee employee;
-	private Employee employeeList;
+	private Employee[] employeeList;
 
 	public Employee getEmployee() {
 		return employee;
@@ -15,13 +15,15 @@ public class EmployeeDto extends Dto {
 		this.employee = employee;
 	}
 
-	public Employee getEmployeeList() {
+	public Employee[] getEmployeeList() {
 		return employeeList;
 	}
 
-	public void setEmployeeList(Employee employeeList) {
+	public void setEmployeeList(Employee[] employeeList) {
 		this.employeeList = employeeList;
 	}
+
+	
 	
 	
 	

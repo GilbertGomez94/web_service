@@ -12,7 +12,7 @@ public class LogManagement {
 	private LogDao dao = new LogDao();
 	private LogDto dto = new LogDto();
 	
-	public LogDto ReadLog(){
+	public LogDto readLog(){
 		_log = new Log();
 		
 		try {

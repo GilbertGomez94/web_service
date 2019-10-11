@@ -4,6 +4,7 @@ import java.sql.Date;
 
 public class Contract {
 	
+	private String provider;
 	private int percent;
 	private Date requestDate;
 	private Date firmDate;
@@ -11,6 +12,16 @@ public class Contract {
 	private Date expirationDate;
 	private String type;
 	
+	
+	
+	public String getProvider() {
+		return provider;
+	}
+
+	public void setProvider(String provider) {
+		this.provider = provider;
+	}
+
 	public int getPercent() {
 		return percent;
 	}

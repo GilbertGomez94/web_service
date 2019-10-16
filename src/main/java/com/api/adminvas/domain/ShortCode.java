@@ -2,7 +2,7 @@ package com.api.adminvas.domain;
 
 public class ShortCode {
 	
-	private int shortCode;
+	private String shortCode;
 	private String typeService;
 	private String ESME;
 	private String productname;
@@ -10,14 +10,14 @@ public class ShortCode {
 	private int approxtraffic;
 	private String observation;
 	
-	public int getShortCode() {
+	public String getShortCode() {
 		return shortCode;
 	}
-	
-	public void setShortCode(int shortCode) {
+
+	public void setShortCode(String shortCode) {
 		this.shortCode = shortCode;
 	}
-	
+
 	public String getTypeService() {
 		return typeService;
 	}

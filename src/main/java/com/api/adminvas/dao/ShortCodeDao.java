@@ -4,8 +4,7 @@ import com.api.adminvas.domain.ShortCode;
 
 public class ShortCodeDao {
 	
-	private ShortCode shortCode;
-	
+	private ShortCode shortCode;	
 	private ShortCode[] shortCodelist;
 
 	public ShortCode getShortCode() {

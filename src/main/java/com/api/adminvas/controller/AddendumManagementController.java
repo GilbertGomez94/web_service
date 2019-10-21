@@ -20,13 +20,13 @@ import com.api.adminvas.dto.AddendumDto;
 import com.api.adminvas.dto.BlackListDto;
 
 @RestController
-@RequestMapping("addendum")
+@RequestMapping("/addendum")
 public class AddendumManagementController {
 	
 	private AddendumManagement addendumManament = new AddendumManagement();
 	private AddendumDto dto = new AddendumDto();
 	
-	@GetMapping(value = "ReadAddendum",
+	@GetMapping(value = "/ReadAddendum",
 			produces  = {
 					MediaType.APPLICATION_JSON_VALUE
 			})
